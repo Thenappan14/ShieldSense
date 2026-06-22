@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShieldSense</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ ShieldSense</h1>
+            <p class="subtitle">AI Scam Detector</p>
+        </div>
+
+        <div class="content">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="analyze">Analyze</button>
+                <button class="tab-btn" data-tab="paste">Paste</button>
+                <button class="tab-btn" data-tab="url">URL Check</button>
+            </div>
+
+            <!-- Analyze Tab -->
+            <div id="analyze" class="tab-content active">
+                <div class="info-box">
+                    <h3>Quick Analysis</h3>
+                    <p>Check the current page or selected content for scams</p>
+                </div>
+                <button id="analyze-btn" class="action-btn primary">
+                    Scan Current Page
+                </button>
+                <button id="analyze-selection-btn" class="action-btn">
+                    Analyze Selected Text
+                </button>
+            </div>
+
+            <!-- Paste Tab -->
+            <div id="paste" class="tab-content">
+                <textarea id="paste-content" placeholder="Paste email, WhatsApp message, or text here..." class="input-area"></textarea>
+                <button id="paste-analyze-btn" class="action-btn primary">
+                    Analyze Pasted Content
+                </button>
+            </div>
+
+            <!-- URL Tab -->
+            <div id="url" class="tab-content">
+                <input type="url" id="url-input" placeholder="Enter URL to check..." class="input-field">
+                <button id="url-analyze-btn" class="action-btn primary">
+                    Check URL
+                </button>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="results hidden">
+                <div class="result-card" id="result-content"></div>
+                <button id="open-full-btn" class="action-btn">
+                    Open Full Report →
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="text-small">
+                <a href="#" id="open-dashboard">Open Dashboard</a> | 
+                <a href="#" id="settings">Settings</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
